@@ -1,20 +1,23 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=15 format=1]
 
-[ext_resource path="res://resource/return_of_ganon_regular.fnt" type="BitmapFont" id=1]
-[ext_resource path="res://art/ui/crew_module.png" type="Texture" id=2]
-[ext_resource path="res://art/ui/special_ability_button.png" type="Texture" id=3]
-[ext_resource path="res://art/ui/SpecialAbilityActive.png" type="Texture" id=4]
-[ext_resource path="res://art/ui/hull_bar.png" type="Texture" id=5]
-[ext_resource path="res://art/ui/oxygen.png" type="Texture" id=6]
-[ext_resource path="res://art/ui/coin.png" type="Texture" id=7]
-[ext_resource path="res://art/ui/ammo.png" type="Texture" id=8]
-[ext_resource path="res://art/ui/fuel.png" type="Texture" id=9]
-[ext_resource path="res://art/ui/fire_ext.png" type="Texture" id=10]
-[ext_resource path="res://art/ui/medkit.png" type="Texture" id=11]
-[ext_resource path="res://art/ui/repair.png" type="Texture" id=12]
-[ext_resource path="res://art/ui/cargo.png" type="Texture" id=13]
+[ext_resource path="res://script/ui.gd" type="Script" id=1]
+[ext_resource path="res://resource/return_of_ganon_regular.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://art/ui/crew_module.png" type="Texture" id=3]
+[ext_resource path="res://art/ui/special_ability_button.png" type="Texture" id=4]
+[ext_resource path="res://art/ui/coin.png" type="Texture" id=5]
+[ext_resource path="res://art/ui/ammo.png" type="Texture" id=6]
+[ext_resource path="res://art/ui/medkit.png" type="Texture" id=7]
+[ext_resource path="res://art/ui/SpecialAbilityActive.png" type="Texture" id=8]
+[ext_resource path="res://art/ui/repair.png" type="Texture" id=9]
+[ext_resource path="res://art/ui/hull_bar.png" type="Texture" id=10]
+[ext_resource path="res://art/ui/oxygen.png" type="Texture" id=11]
+[ext_resource path="res://art/ui/fuel.png" type="Texture" id=12]
+[ext_resource path="res://art/ui/fire_ext.png" type="Texture" id=13]
+[ext_resource path="res://art/ui/cargo.png" type="Texture" id=14]
 
 [node name="ui" type="Node"]
+
+script/script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
 
@@ -57,14 +60,13 @@ alignment = 0
 
 [node name="Control" type="Control" parent="Control/VBoxContainer/HBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = -1.0
+margin/left = 0.0
 margin/top = 0.0
-margin/right = 1409.0
+margin/right = 1410.0
 margin/bottom = 846.0
 
 [node name="Viewport" type="Viewport" parent="Control/VBoxContainer/HBoxContainer/Control"]
@@ -106,7 +108,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 266.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Crew"
 percent_visible = 1.0
 lines_skipped = 0
@@ -114,7 +116,6 @@ max_lines_visible = -1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -150,7 +151,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 254.0
 margin/bottom = 72.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/crew_module"]
@@ -163,7 +164,7 @@ margin/left = 81.0
 margin/top = 36.0
 margin/right = 248.0
 margin/bottom = 64.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Child Man"
 autowrap = true
 clip_text = true
@@ -183,7 +184,7 @@ margin/left = 0.0
 margin/top = 76.0
 margin/right = 254.0
 margin/bottom = 148.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module2" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -198,7 +199,7 @@ margin/left = 0.0
 margin/top = 152.0
 margin/right = 254.0
 margin/bottom = 224.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module3" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -208,11 +209,11 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2.0
+margin/left = 0.0
 margin/top = 228.0
-margin/right = 252.0
+margin/right = 254.0
 margin/bottom = 300.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module4" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -226,7 +227,7 @@ margin/left = 0.0
 margin/top = 304.0
 margin/right = 254.0
 margin/bottom = 376.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module5" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -240,7 +241,7 @@ margin/left = 0.0
 margin/top = 380.0
 margin/right = 254.0
 margin/bottom = 452.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module6" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -254,7 +255,7 @@ margin/left = 0.0
 margin/top = 456.0
 margin/right = 254.0
 margin/bottom = 528.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module7" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -268,7 +269,7 @@ margin/left = 0.0
 margin/top = 532.0
 margin/right = 254.0
 margin/bottom = 604.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module8" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -282,7 +283,7 @@ margin/left = 0.0
 margin/top = 608.0
 margin/right = 254.0
 margin/bottom = 680.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module9" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -296,7 +297,7 @@ margin/left = 0.0
 margin/top = 684.0
 margin/right = 254.0
 margin/bottom = 756.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module10" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -310,7 +311,7 @@ margin/left = 0.0
 margin/top = 760.0
 margin/right = 254.0
 margin/bottom = 832.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module11" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -324,7 +325,7 @@ margin/left = 0.0
 margin/top = 836.0
 margin/right = 254.0
 margin/bottom = 908.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module12" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -338,7 +339,7 @@ margin/left = 0.0
 margin/top = 912.0
 margin/right = 254.0
 margin/bottom = 984.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module13" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -352,7 +353,7 @@ margin/left = 0.0
 margin/top = 988.0
 margin/right = 254.0
 margin/bottom = 1060.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module14" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -366,7 +367,7 @@ margin/left = 0.0
 margin/top = 1064.0
 margin/right = 254.0
 margin/bottom = 1136.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module15" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -380,7 +381,7 @@ margin/left = 0.0
 margin/top = 1140.0
 margin/right = 254.0
 margin/bottom = 1212.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module16" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -394,7 +395,7 @@ margin/left = 0.0
 margin/top = 1216.0
 margin/right = 254.0
 margin/bottom = 1288.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module17" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -408,7 +409,7 @@ margin/left = 0.0
 margin/top = 1292.0
 margin/right = 254.0
 margin/bottom = 1364.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module18" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -422,7 +423,7 @@ margin/left = 0.0
 margin/top = 1368.0
 margin/right = 254.0
 margin/bottom = 1440.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module19" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -436,7 +437,7 @@ margin/left = 0.0
 margin/top = 1444.0
 margin/right = 254.0
 margin/bottom = 1516.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module20" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -450,7 +451,7 @@ margin/left = 0.0
 margin/top = 1520.0
 margin/right = 254.0
 margin/bottom = 1592.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module21" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -464,7 +465,7 @@ margin/left = 0.0
 margin/top = 1596.0
 margin/right = 254.0
 margin/bottom = 1668.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module22" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -478,7 +479,7 @@ margin/left = 0.0
 margin/top = 1672.0
 margin/right = 254.0
 margin/bottom = 1744.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module23" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -492,7 +493,7 @@ margin/left = 0.0
 margin/top = 1748.0
 margin/right = 254.0
 margin/bottom = 1820.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module24" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -506,7 +507,7 @@ margin/left = 0.0
 margin/top = 1824.0
 margin/right = 254.0
 margin/bottom = 1896.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module25" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -520,7 +521,7 @@ margin/left = 0.0
 margin/top = 1900.0
 margin/right = 254.0
 margin/bottom = 1972.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module26" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -534,7 +535,7 @@ margin/left = 0.0
 margin/top = 1976.0
 margin/right = 254.0
 margin/bottom = 2048.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module27" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -548,7 +549,7 @@ margin/left = 0.0
 margin/top = 2052.0
 margin/right = 254.0
 margin/bottom = 2124.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module28" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -562,7 +563,7 @@ margin/left = 0.0
 margin/top = 2128.0
 margin/right = 254.0
 margin/bottom = 2200.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module29" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -576,7 +577,7 @@ margin/left = 0.0
 margin/top = 2204.0
 margin/right = 254.0
 margin/bottom = 2276.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="crew_module30" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -590,7 +591,7 @@ margin/left = 0.0
 margin/top = 2280.0
 margin/right = 254.0
 margin/bottom = 2352.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -615,7 +616,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 266.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Menu"
 percent_visible = 1.0
 lines_skipped = 0
@@ -631,7 +632,7 @@ margin/left = 0.0
 margin/top = 32.0
 margin/right = 266.0
 margin/bottom = 60.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Crew"
 percent_visible = 1.0
 lines_skipped = 0
@@ -647,7 +648,7 @@ margin/left = 0.0
 margin/top = 64.0
 margin/right = 266.0
 margin/bottom = 92.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Ship"
 percent_visible = 1.0
 lines_skipped = 0
@@ -676,19 +677,20 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 200.0
 margin/bottom = 200.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 204.0
 margin/top = 0.0
-margin/right = 535.0
+margin/right = 629.0
 margin/bottom = 200.0
 alignment = 0
 
@@ -702,10 +704,149 @@ margin/left = 0.0
 margin/top = 55.0
 margin/right = 312.0
 margin/bottom = 145.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Crew
 Warning! We are under attack!
 Fire at will!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 316.0
+margin/top = 0.0
+margin/right = 401.0
+margin/bottom = 200.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 200 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 85.0
+margin/bottom = 200.0
+color = Color( 0.519531, 0.129883, 0.129883, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = 38.0
+margin/right = 66.0
+margin/bottom = 161.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 48.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fire
+Guns"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 48.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 6.0
+margin/top = 0.0
+margin/right = 26.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 30.0
+margin/top = 0.0
+margin/right = 42.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 48.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 6.0
+margin/top = 0.0
+margin/right = 26.0
+margin/bottom = 28.0
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/HBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 30.0
+margin/top = 0.0
+margin/right = 42.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "4"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -716,219 +857,2255 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 316.0
+margin/left = 405.0
 margin/top = 0.0
-margin/right = 331.0
+margin/right = 425.0
 margin/bottom = 200.0
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 stretch_mode = 4
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/VBoxContainer/HBoxContainer 2"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 2
-margin/left = 539.0
-margin/top = 0.0
-margin/right = 1368.0
-margin/bottom = 200.0
-scroll/horizontal = true
-scroll/vertical = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer"]
+[node name="VBoxContainer 2" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 3
-margin/left = 0.0
+margin/left = 633.0
 margin/top = 0.0
-margin/right = 1732.0
-margin/bottom = 188.0
+margin/right = 1368.0
+margin/bottom = 200.0
 alignment = 0
 
-[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 735.0
+margin/bottom = 28.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
 
 focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 164.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "Battle Stations"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 168.0
+margin/top = 0.0
+margin/right = 183.0
+margin/bottom = 28.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="TextureFrame1" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 187.0
+margin/top = 0.0
+margin/right = 202.0
+margin/bottom = 28.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="TextureFrame2" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 206.0
+margin/top = 0.0
+margin/right = 221.0
+margin/bottom = 28.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="TextureFrame3" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 225.0
+margin/top = 0.0
+margin/right = 240.0
+margin/bottom = 28.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="TextureFrame4" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 244.0
+margin/top = 0.0
+margin/right = 259.0
+margin/bottom = 28.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="TextureFrame5" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 263.0
+margin/top = 0.0
+margin/right = 278.0
+margin/bottom = 28.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 32.0
+margin/right = 735.0
+margin/bottom = 200.0
+scroll/horizontal = true
+scroll/vertical = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = -1.0
+margin/top = 0.0
+margin/right = 1330.0
+margin/bottom = 156.0
+alignment = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 120.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
-stretch_mode = 0
+margin/right = 85.0
+margin/bottom = 156.0
+use_top_left = false
 
-[node name="TextureFrame1" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 124.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 244.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="TextureFrame2" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer/HBoxContainer1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 248.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 368.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
-[node name="TextureFrame3" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer1" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 89.0
+margin/top = 0.0
+margin/right = 174.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 372.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 492.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="TextureFrame4" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer/HBoxContainer1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 496.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 616.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
-[node name="TextureFrame5" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer1/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer3" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 178.0
+margin/top = 0.0
+margin/right = 263.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 620.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 740.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="TextureFrame6" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer/HBoxContainer1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 744.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 864.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
-[node name="TextureFrame7" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer3/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer4" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 267.0
+margin/top = 0.0
+margin/right = 352.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 868.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 988.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="TextureFrame8" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer/HBoxContainer1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 992.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 1112.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
-[node name="TextureFrame9" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer4/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer5" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 356.0
+margin/top = 0.0
+margin/right = 441.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1116.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 1236.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="TextureFrame10" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer/HBoxContainer1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1240.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 1360.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
-[node name="TextureFrame11" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer5/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer6" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 445.0
+margin/top = 0.0
+margin/right = 530.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1364.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 1484.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="TextureFrame12" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer/HBoxContainer1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1488.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 1608.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
-[node name="TextureFrame13" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/ScrollContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer6/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer7" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 534.0
+margin/top = 0.0
+margin/right = 619.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer/HBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1612.0
+margin/left = 21.0
 margin/top = 0.0
-margin/right = 1732.0
-margin/bottom = 188.0
-texture = ExtResource( 3 )
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
 stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer7/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer8" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 623.0
+margin/top = 0.0
+margin/right = 708.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer8/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer9" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 712.0
+margin/top = 0.0
+margin/right = 797.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer9/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer10" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 801.0
+margin/top = 0.0
+margin/right = 886.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer10/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer11" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 890.0
+margin/top = 0.0
+margin/right = 975.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer11/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer12" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 979.0
+margin/top = 0.0
+margin/right = 1064.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer12/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer13" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1068.0
+margin/top = 0.0
+margin/right = 1153.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer13/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer14" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1157.0
+margin/top = 0.0
+margin/right = 1242.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer14/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CenterContainer15" type="CenterContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1246.0
+margin/top = 0.0
+margin/right = 1331.0
+margin/bottom = 156.0
+use_top_left = false
+
+[node name="ColorFrame" type="ColorFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15"]
+
+visibility/behind_parent = true
+rect/min_size = Vector2( 85, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 85.0
+margin/bottom = 128.0
+color = Color( 0.59375, 0.59375, 0.59375, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 16.0
+margin/right = 81.0
+margin/bottom = 139.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 78.0
+margin/bottom = 59.0
+custom_fonts/font = ExtResource( 2 )
+text = "Repair
+Engines"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 78.0
+margin/bottom = 91.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 95.0
+margin/right = 78.0
+margin/bottom = 123.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 21.0
+margin/top = 0.0
+margin/right = 41.0
+margin/bottom = 28.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer 2/ScrollContainer/HBoxContainer/CenterContainer15/VBoxContainer/HBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 0.0
+margin/right = 57.0
+margin/bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2"]
 
@@ -944,7 +3121,6 @@ alignment = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -966,7 +3142,7 @@ margin/left = 0.0
 margin/top = 2.0
 margin/right = 48.0
 margin/bottom = 30.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Hull"
 uppercase = true
 percent_visible = 1.0
@@ -992,7 +3168,7 @@ range/exp_edit = false
 range/rounded = false
 texture/under = null
 texture/over = null
-texture/progress = ExtResource( 5 )
+texture/progress = ExtResource( 10 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
@@ -1019,7 +3195,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 66.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Shield"
 uppercase = true
 percent_visible = 1.0
@@ -1048,7 +3224,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 15.0
 margin/bottom = 28.0
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 [node name="TextureFrame1" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer1/TextureProgress"]
@@ -1061,7 +3237,7 @@ margin/left = 19.0
 margin/top = 0.0
 margin/right = 34.0
 margin/bottom = 28.0
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 [node name="TextureFrame2" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer1/TextureProgress"]
@@ -1074,7 +3250,7 @@ margin/left = 38.0
 margin/top = 0.0
 margin/right = 53.0
 margin/bottom = 28.0
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 [node name="TextureFrame3" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer1/TextureProgress"]
@@ -1087,7 +3263,7 @@ margin/left = 57.0
 margin/top = 0.0
 margin/right = 72.0
 margin/bottom = 28.0
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 [node name="TextureFrame4" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer1/TextureProgress"]
@@ -1100,7 +3276,7 @@ margin/left = 76.0
 margin/top = 0.0
 margin/right = 91.0
 margin/bottom = 28.0
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 [node name="TextureFrame" type="TextureFrame" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer1"]
@@ -1113,7 +3289,7 @@ margin/left = 165.0
 margin/top = 0.0
 margin/right = 185.0
 margin/bottom = 28.0
-texture = ExtResource( 6 )
+texture = ExtResource( 11 )
 stretch_mode = 0
 
 [node name="Label 2" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer1"]
@@ -1127,7 +3303,7 @@ margin/left = 189.0
 margin/top = 0.0
 margin/right = 265.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Oxygen"
 uppercase = true
 percent_visible = 1.0
@@ -1156,7 +3332,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 20.0
 margin/bottom = 28.0
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer3"]
@@ -1170,7 +3346,7 @@ margin/left = 24.0
 margin/top = 0.0
 margin/right = 66.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "coin"
 uppercase = true
 percent_visible = 1.0
@@ -1187,7 +3363,7 @@ margin/left = 70.0
 margin/top = 0.0
 margin/right = 90.0
 margin/bottom = 28.0
-texture = ExtResource( 8 )
+texture = ExtResource( 6 )
 stretch_mode = 0
 
 [node name="Label1" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer3"]
@@ -1201,7 +3377,7 @@ margin/left = 94.0
 margin/top = 0.0
 margin/right = 146.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "ammo"
 uppercase = true
 percent_visible = 1.0
@@ -1218,7 +3394,7 @@ margin/left = 150.0
 margin/top = 0.0
 margin/right = 170.0
 margin/bottom = 28.0
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 stretch_mode = 0
 
 [node name="Label2" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer3"]
@@ -1232,7 +3408,7 @@ margin/left = 174.0
 margin/top = 0.0
 margin/right = 222.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "fuel"
 uppercase = true
 percent_visible = 1.0
@@ -1261,7 +3437,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 20.0
 margin/bottom = 28.0
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer4"]
@@ -1275,7 +3451,7 @@ margin/left = 24.0
 margin/top = 0.0
 margin/right = 66.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "fire"
 uppercase = true
 percent_visible = 1.0
@@ -1292,7 +3468,7 @@ margin/left = 70.0
 margin/top = 0.0
 margin/right = 90.0
 margin/bottom = 28.0
-texture = ExtResource( 11 )
+texture = ExtResource( 7 )
 stretch_mode = 0
 
 [node name="Label1" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer4"]
@@ -1306,7 +3482,7 @@ margin/left = 94.0
 margin/top = 0.0
 margin/right = 164.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "medkit"
 uppercase = true
 percent_visible = 1.0
@@ -1323,7 +3499,7 @@ margin/left = 168.0
 margin/top = 0.0
 margin/right = 188.0
 margin/bottom = 28.0
-texture = ExtResource( 12 )
+texture = ExtResource( 9 )
 stretch_mode = 0
 
 [node name="Label2" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer4"]
@@ -1337,7 +3513,7 @@ margin/left = 192.0
 margin/top = 0.0
 margin/right = 258.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "repair"
 uppercase = true
 percent_visible = 1.0
@@ -1366,7 +3542,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 20.0
 margin/bottom = 28.0
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer5"]
@@ -1380,7 +3556,7 @@ margin/left = 24.0
 margin/top = 0.0
 margin/right = 84.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "cargo"
 uppercase = true
 percent_visible = 1.0
