@@ -1,3 +1,5 @@
+![Space Skipper logo](/game/game_icon.png)
+
 ## SpaceSkipper
 
 SpaceSkipper is a game developed by Joseph Marshall and Brendan Raftery for the
