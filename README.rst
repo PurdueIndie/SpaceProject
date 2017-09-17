@@ -19,7 +19,8 @@ Contribute
 ----------
 
 - Issue Tracker: github.com/PurdueIndieGameDev/SpaceProject/issues
-- Source Code: github.com/PurdueIndieGameDev/SpaceProject/
+- Source Code: github.com/PurdueIndieGameDev/SpaceProject
+- Docs: space-skipper.readthedocs.io
 
 Support
 -------
