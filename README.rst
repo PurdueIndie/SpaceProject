@@ -18,9 +18,9 @@ Install SpaceSkipper by downloading the newest release
 Contribute
 ----------
 
-- Issue Tracker: github.com/PurdueIndieGameDev/SpaceProject/issues
-- Source Code: github.com/PurdueIndieGameDev/SpaceProject
-- Docs: space-skipper.readthedocs.io
+- Issue Tracker: `github.com/PurdueIndieGameDev/SpaceProject/issues<github.com/PurdueIndieGameDev/SpaceProject/issues>`_
+- Source Code: `github.com/PurdueIndieGameDev/SpaceProject<github.com/PurdueIndieGameDev/SpaceProject>`_
+- Docs: `space-skipper.readthedocs.io<space-skipper.readthedocs.io>`_
 
 Support
 -------
