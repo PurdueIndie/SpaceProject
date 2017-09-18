@@ -3,7 +3,7 @@ extends Node
 onready var ui = get_node("ui")
 onready var game = get_node("ui/Control/VBoxContainer/HBoxContainer/Control/Viewport/game")
 
-# prints cool
+# prints cool to the console
 func cool():
 	print('cool')
 
