@@ -1,0 +1,277 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://resource/ship_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scene/instance/wall_diagonal_left.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/instance/walk_horizontal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/instance/wall_vertical.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/instance/wall_diagonal_right.tscn" type="PackedScene" id=5]
+
+[node name="ship" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell/size = Vector2( 32, 32 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 0, 136, 1, 48, 2, 23, 3, 23, 6, 48, 7, 48, 8, 48, 9, 49, 65536, 48, 65537, 48, 65538, 23, 65539, 23, 65542, 48, 65543, 48, 65544, 48, 65545, 48, 131072, 25, 131073, 1, 131074, 26, 131075, 23, 131078, 24, 131079, 48, 131080, 48, 131081, 22, 196608, 23, 196609, 23, 196610, 23, 196611, 23, 196614, 25, 196615, 26, 196616, 25, 196617, 26, 262144, 23, 262145, 23, 262146, 23, 262147, 23, 262150, 23, 262151, 23, 262152, 23, 262153, 23, 327680, 23, 327681, 23, 327682, 23, 327683, 23, 327686, 23, 327687, 23, 327688, 23, 327689, 23, 393216, 14, 393217, 56, 393218, 56, 393219, 56, 393220, 122, 393221, 147, 393222, 23, 393223, 23, 393224, 23, 393225, 23, 458752, 35, 458753, 59, 458754, 59, 458755, 59, 458756, 33, 458757, 23, 458758, 23, 458759, 23, 458760, 23, 458761, 23, 524288, 106, 524289, 59, 524290, 59, 524291, 59, 524292, 33, 524293, 23, 524294, 23, 524295, 23, 524296, 23, 524297, 148, 589825, 83, 589826, 12, 589827, 12, 589828, 37, 589829, 23, 589830, 23, 589831, 23, 589832, 148 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="walls" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -3, -2 )
+
+[node name="wall_diagonal_left" parent="walls" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 19, 18 )
+
+[node name="walk_horizontal" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 51, 2 )
+
+[node name="walk_horizontal2" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 83, 322 )
+
+[node name="walk_horizontal6" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 179, 322 )
+
+[node name="walk_horizontal1" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 211, 2 )
+
+[node name="walk_horizontal 2" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 83, 2 )
+
+[node name="walk_horizontal5" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 115, 322 )
+
+[node name="walk_horizontal6 2" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 211, 322 )
+
+[node name="walk_horizontal4" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 243, 2 )
+
+[node name="walk_horizontal3" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 115, 2 )
+
+[node name="walk_horizontal7" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 19, 66 )
+
+[node name="walk_horizontal8" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 83, 66 )
+
+[node name="walk_horizontal9" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 114, 194 )
+
+[node name="walk_horizontal10" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 82, 194 )
+
+[node name="walk_horizontal11" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 19, 194 )
+
+[node name="walk_horizontal12" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 211, 194 )
+
+[node name="walk_horizontal13" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 212, 66 )
+
+[node name="walk_horizontal14" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 244, 66 )
+
+[node name="walk_horizontal15" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 307, 66 )
+
+[node name="walk_horizontal5 2" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 147, 322 )
+
+[node name="walk_horizontal53" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 243, 322 )
+
+[node name="walk_horizontal4 2" parent="walls" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 275, 2 )
+
+[node name="wall_vertical" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 195, 18 )
+
+[node name="wall_vertical6 2" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 131, 18 )
+
+[node name="wall_vertical610" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 67, 18 )
+
+[node name="wall_vertical611" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 67, 50 )
+
+[node name="wall_vertical63" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 50 )
+
+[node name="wall_vertical68 4" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 50 )
+
+[node name="wall_vertical1" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 195, 50 )
+
+[node name="wall_vertical6 3" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 131, 50 )
+
+[node name="wall_vertical64" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 82 )
+
+[node name="wall_vertical68 3" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 82 )
+
+[node name="wall_vertical2" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 195, 82 )
+
+[node name="wall_vertical6 4" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 131, 82 )
+
+[node name="wall_vertical65" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 114 )
+
+[node name="wall_vertical68" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 114 )
+
+[node name="wall_vertical3" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 195, 114 )
+
+[node name="wall_vertical6" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 131, 114 )
+
+[node name="wall_vertical7" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 146 )
+
+[node name="wall_vertical8" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 146 )
+
+[node name="wall_vertical4" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 195, 146 )
+
+[node name="wall_vertical6 6" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 131, 146 )
+
+[node name="wall_vertical67" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 178 )
+
+[node name="wall_vertical68 5" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 178 )
+
+[node name="wall_vertical5" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 195, 178 )
+
+[node name="wall_vertical9" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 227, 210 )
+
+[node name="wall_vertical10" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 227, 274 )
+
+[node name="wall_vertical11" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 227, 304 )
+
+[node name="wall_vertical6 5" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 131, 178 )
+
+[node name="wall_vertical66" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 210 )
+
+[node name="wall_vertical69" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3, 242 )
+
+[node name="wall_vertical68 2" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 210 )
+
+[node name="wall_vertical683" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323, 242 )
+
+[node name="wall_diagonal_right" parent="walls" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 307, 18 )
+
+[node name="wall_diagonal_right 2" parent="walls" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 147, 210 )
+
+[node name="wall_diagonal_right3" parent="walls" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 51, 306 )
+
+[node name="wall_diagonal_right4" parent="walls" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 19, 274 )
+
+[node name="wall_diagonal_left 2" parent="walls" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 179, 210 )
+
+[node name="wall_diagonal_left3" parent="walls" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 307, 274 )
+
+[node name="wall_diagonal_left4" parent="walls" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 275, 306 )
+
+

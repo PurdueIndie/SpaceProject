@@ -7,6 +7,11 @@ onready var game = get_node("ui/Control/VBoxContainer/HBoxContainer/Control/View
 func cool():
 	print('cool')
 
+
+
+
+# All temp stuff for console
+
 func _ready():
 	set_process_input(true)
 
@@ -16,30 +21,42 @@ func _input(event):
 		get_node("WindowDialog/VBoxContainer/LineEdit").grab_focus()
 
 
+# stupid shit for console (hit ` [tilde])
 func _on_LineEdit_text_entered( text ):
-	var t = text.split('.', false)
-	var m
-
-	if t != null and t.size() > 1:
-		m = t[1].split('(', false)
-		if m[-1] == ')':
-			m.remove(m.size() - 1)
-
-	var con = get_node("WindowDialog/VBoxContainer/Label")
-	var z
-	if m != null and m.size() > 0:
-		if t[0] == 'self':
-			z = self
-		else:
-			z = get(t[0])
-		if z:
-			if m.size() == 1:
-				z = z.call(m[0])
-			elif m.size() == 2 :
-				z = z.call(m[0], m[1])
-			elif m.size() == 3:
-				z = z.call(m[0], m[1], m[2])
-			elif m.size() == 4:
-				z = z.call(m[0], m[1], m[2], m[3])
-	con.set_text(str(z) if z else "None"  + "\n" + con.get_text())
+	var console = get_node("WindowDialog/VBoxContainer/Label")
+	var ret = "Error"
+	var a = text.split('.')
+	if a != null and a.size() > 1:
+		var target = find_node(a[0])
+		if target != null:
+			var b = a[1].split('(')
+			if b != null and b.size() > 0:
+				var function = b[0]
+				var s = text.find('(')
+				if s != -1:
+					var args = text.right(s + 1)
+					args = args.split(')')
+					if args.size() > 0:
+						args = args[0].split(',')
+						if args.size() == 0:
+							if target.has_method(function):
+								ret = target.call(function)
+						elif args.size() == 1:
+							if target.has_method(function):
+								ret = target.call(function, args[0])
+						elif args.size() == 2:
+							if target.has_method(function):
+								ret = target.call(function, args[0], args[1])
+						elif args.size() == 3:
+							if target.has_method(function):
+								ret = target.call(function, args[0], args[1], args[2])
+						elif args.size() == 4:
+							if target.has_method(function):
+								ret = target.call(function, args[0], args[1], args[2], args[4])
+	if ret == null:
+		ret = "null"
+	console.set_text(ret + '\n'+ console.get_text())
 	get_node("WindowDialog/VBoxContainer/LineEdit").clear()
+func _on_LineEdit_text_changed( text ):
+	if text == '`':
+		get_node("WindowDialog/VBoxContainer/LineEdit").clear()
