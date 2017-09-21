@@ -7,7 +7,9 @@ onready var game = get_node("ui/Control/VBoxContainer/HBoxContainer/Control/View
 func cool():
 	print('cool')
 
-
+# does some rad thing
+func rad():
+	print("wowzer!")
 
 
 # All temp stuff for console

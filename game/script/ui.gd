@@ -3,13 +3,16 @@ extends Node
 func UI():
 	pass
 
+func duh():
+	pass
+
 # sets the hull bar to a value (0-100)
-# takes float returns null
+# ret null, arg float
 func set_hull( value ):
 	get_node("Control/VBoxContainer/HBoxContainer 2/VBoxContainer/HBoxContainer/TextureProgress").set_value( float(value) )
 
 # sets the shield amount
-# takes int returns null
+# ret null, arg String
 func set_shield( value ):
 	pass
 
