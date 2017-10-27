@@ -41,7 +41,6 @@ for f in files:
 			for i in range(len(comment_group) - 1):
 				if i == len(comment_group) - 2:
 					match = comment_regex.match(comment_group[i][1:].strip())
-					print(match)
 					if match != None:
 						arg_types = match.group(2).split(',')
 						args_raw = result_groups[4].split(',')
